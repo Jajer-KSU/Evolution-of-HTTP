@@ -4,60 +4,59 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Evolution of HTTP - Home</title>
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
-
     <body>
-        <!-- Navigation -->
-        <nav aria-label="MainNavigation">
-        <!-- hidden menu toggle for Mobile-->
-        <input type="checkbox" id="menu-toggle" aria-hidden="true">
-        <!-- -->
-        <label for="menu-toggle" class="menu-toggle-label">&#9776; Menu</label>
+    <!-- Nav Bar -->
+        <nav id="navigationbar" aria-label="NavigationBar">
+            <!-- Hidden menu toggle for Mobile -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+            <!-- Hamburger icon label -->
+            <label for="menu-toggle" class="menu-toggle-label">
+                &#9776; Menu
+            </label>
             <!-- Main navigation links -->
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="Development.html" class="nav-link">Development</a>
-                <a href="Future of HTTP.html" class="nav-link">Future of HTTP</a>
+                <a href="History.html" class="nav-link">History</a>
+                <a href="Future Development.html" class="nav-link">Future Development</a>
                 <a href="Quiz.html" class="nav-link">Quiz</a>
                 <a href="References.html" class="nav-link">References</a>
             </div>
         </nav>
-
-        <main class="homepage-layout">
-            <div class="main-content-box">
-                <h1>Welcome to the Evolution of HTTP</h1>
-                <p>This website explores the history, development, and future of the Hypertext Transfer Protocol (HTTP).</p>
-                <p>Use the navigation links above to explore different sections.</p>
-            </p><br>
+        
+        <main>
+            <h1>Welcome to the Evolution of HTTP</h1>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <img src="images/http.png" class:"http-image.png"></image>
+                        <div class="card-text">  
+                            <h2 class="home-subheader">What is HTTP?</h2>
+                            <p>
+                                HTTP, known as Hypertext Transfer Protocol, forms the base for what the World Wide Web was built upon. 
+                                Anytime someone tries to search the World Wide Web, HTTP is used to load said webpages using what is 
+                                called hypertext links.
+                            </p>
+                            <p>
+                                HTTP was designed at the application layer protocol of the internet protocol 
+                                suite. According to <a href="https://www.rfc-editor.org/rfc/rfc7230.html">RFC 7230</a>, Hypertext Transfer Protocol is a stateless application-level request/response 
+                                protocol that functions by the swapping of messages across a reliable connection <a href="References.html">(Fielding & Reschke, 1970).</a>
+                                As just mentioned, HTTP is a stateless protocol, meaning that it does not maintain any memory of previous 
+                                connections because each request is managed independently from one another.
+                            </p>
+                            <p>
+                                To put the process of an HTTP interaction into better understanding, we can imagine a client (usually a browser) 
+                                searching for something on the WWW, the HTTP request is sent to the server, and the server responds back with 
+                                an HTTP response which displays the results of the query <a href="References.html"> (What is HTTP? | cloudflare).</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <Footer>
-                <p>
-                    This is a class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">KSU IT 3203</a>
-                </p>
-            </footer>
-        </body>
+        <Footer>
+            <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">KSU IT 3203</p>
+        </footer>
+    </body>
 </html>

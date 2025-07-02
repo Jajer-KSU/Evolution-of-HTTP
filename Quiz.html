@@ -4,22 +4,176 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Evolution of HTTP - Quiz</title>
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
-
     <body>
-        <!-- Navigation -->
-        <nav aria-label="MainNavigation">
-        <!-- hidden menu toggle for Mobile-->
-        <input type="checkbox" id="menu-toggle" aria-hidden="true">
-        <!-- -->
-        <label for="menu-toggle" class="menu-toggle-label">&#9776; Menu</label>
+    <!-- Nav Bar -->
+        <nav id="navigationbar" aria-label="NavigationBar">
+            <!-- Hidden menu toggle for Mobile -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+            <!-- Hamburger icon label -->
+            <label for="menu-toggle" class="menu-toggle-label">
+                &#9776; Menu
+            </label>
             <!-- Main navigation links -->
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="Development.html" class="nav-link">Development</a>
-                <a href="Future of HTTP.html" class="nav-link">Future of HTTP</a>
+                <a href="History.html" class="nav-link">History</a>
+                <a href="Future Development.html" class="nav-link">Future Development</a>
                 <a href="Quiz.html" class="nav-link">Quiz</a>
                 <a href="References.html" class="nav-link">References</a>
             </div>
         </nav>
+        <main>
+            <h1>Self-Assessment Quiz</h1>
+            <div class="quiz-container">
+                <div class="quiz-card">
+                    <form id="quiz-form">
+                        <div class="question">
+                            <label>1. What does HTTP stand for?</label><span id="feedback1" class="feedback"></span><br>
+                            <input type="radio" name="q1" value="Hypertext Transfer Protocol"> Hypertext Transfer Protocol<br>
+                            <input type="radio" name="q1" value="Hypertext Transmission Protocol"> Hypertext Transmission Protocol<br>
+                            <input type="radio" name="q1" value="Hypertext Transfer Process"> Hypertext Transfer Process<br>
+                            <input type="radio" name="q1" value="Hypertext Transfer Program"> Hypertext Transfer Program<br><br>
+                        </div>
+                        <div class="question">
+                            <label>2. Which version of HTTP added status codes, headers, and the ability to handle different types of content?</label><span id="feedback2" class="feedback"></span><br>
+                            <input type="radio" name="q2" value="HTTP/1.0"> HTTP/1.0<br>
+                            <input type="radio" name="q2" value="HTTP/1.1"> HTTP/1.1<br>
+                            <input type="radio" name="q2" value="HTTP/0.9"> HTTP/0.9<br>
+                            <input type="radio" name="q2" value="HTTP/2.0"> HTTP/2.0<br><br>
+                        </div>
+                        <div class="question">
+                            <label>3. What version introduced the concept of virtual hosting?</label><span id="feedback3" class="feedback"></span><br>
+                            <input type="radio" name="q3" value="HTTP/1.0"> HTTP/1.0<br>
+                            <input type="radio" name="q3" value="HTTP/1.1"> HTTP/1.1<br>
+                            <input type="radio" name="q3" value="HTTP/0.9"> HTTP/0.9<br>
+                            <input type="radio" name="q3" value="HTTP/2.0"> HTTP/2.0<br><br>
+                        </div>
+                        <div class="question">
+                            <labal>4. Fill in the blank: The founding father of HTTP was _______.</labal><span id="feedback4" class="feedback"></span><br>
+                            <input type="text" name="q4" placeholder="Enter your answer here"><br><br>
+                        </div>
+                        <div class="question">
+                            <label>5. Which of these features were introduced with HTTB/2.0?</label><span id="feedback5" class="feedback"></span><br>
+                            <input type="checkbox" name="q5" id="Multiplexing" value="Multiplexing"> Multiplexing<br>
+                            <input type="checkbox" name="q5" id="Header Compression" value="Header Compression"> Header Compression<br>
+                            <input type="checkbox" name="q5" id="Server Push" value="Server Push"> Server Push<br>
+                            <input type="checkbox" name="q5" id="Persistant Connections" value="Persistent Connections"> Persistent Connections<br>
+                            <input type="checkbox" name="q5" id="All of the above" value="All of the above"> All of the above<br><br>
+                        </div>
+                    </form>
+                        <div class="buttons">
+                            <button type="button" onclick="submitAnswers()">Submit</button>
+                            <button type="button" onclick="resetQuiz()">Reset Quiz</button>
+                        </div>
+                    <div id ="percentageScore" class="percentageScore"></div>
+                    <div id="result" class="result"></div>
+
+                    <script>
+                        function submitAnswers() {
+                            const form = document.getElementById('quiz-form');
+                            const resultDiv = document.getElementById('result');
+                            let score = 0;
+
+                            // Check answers
+                            // Q1 ----------------
+                            if (form.q1.value === 'Hypertext Transfer Protocol') {
+                                score++;
+                                document.getElementById('feedback1').textContent = 'Correct!';
+                                document.getElementById('feedback1').style.color = 'green';
+                            }
+                            else {
+                                document.getElementById('feedback1').textContent = 'Incorrect!';
+                                document.getElementById('feedback1').style.color = 'red';
+                            }
+                            // Q2 ----------------
+                            if (form.q2.value === 'HTTP/1.0') {
+                                score++;
+                                document.getElementById('feedback2').textContent = 'Correct!';
+                                document.getElementById('feedback2').style.color = 'green';
+                            }
+                            else {
+                                document.getElementById('feedback2').textContent = 'Incorrect!';
+                                document.getElementById('feedback2').style.color = 'red';
+                            }
+                            // Q3 -----------------
+                            if (form.q3.value === 'HTTP/1.1') {
+                                score++;
+                                document.getElementById('feedback3').textContent = 'Correct!';
+                                document.getElementById('feedback3').style.color = 'green';
+                            }
+                            else {
+                                document.getElementById('feedback3').textContent = 'Incorrect!';
+                                document.getElementById('feedback3').style.color = 'red';
+                            }
+                            // Q4 -----------------
+                            if (form.q4.value.toLowerCase() === 'tim berners-lee') {
+                                score++;
+                                document.getElementById('feedback4').textContent = 'Correct!';
+                                document.getElementById('feedback4').style.color = 'green';
+                            }
+                            else {
+                                document.getElementById('feedback4').textContent = 'Incorrect!';
+                                document.getElementById('feedback4').style.color = 'red';
+                            }
+                            // Q5 -----------------
+                            // Make sure all correct answers are checked
+                            const correctAnswers = document.getElementById('Multiplexing').checked &&
+                                document.getElementById('Header Compression').checked &&
+                                document.getElementById('Server Push').checked;
+                            
+                            const wrongAnswers = document.getElementById('Persistant Connections').checked ||
+                                document.getElementById('All of the above').checked;
+                            
+                            if (correctAnswers && !wrongAnswers) {
+                                score++;
+                                document.getElementById('feedback5').textContent = 'Correct!';
+                                document.getElementById('feedback5').style.color = 'green';
+                            }
+                            else {
+                                document.getElementById('feedback5').textContent = 'Incorrect!';
+                                document.getElementById('feedback5').style.color = 'red';
+                            }
+
+
+
+                            
+
+                            const percentage = (score / 5) * 100;
+                            const results = document.getElementById('result');
+                            const percentageDisplay = document.getElementById('percentageScore');
+                            // Change color based on score
+                            if (percentage >= 80) {
+                                percentageDisplay.style.color = 'green';
+                            } else if (percentage >= 60) {
+                                percentageDisplay.style.color = 'orange';
+                            }
+                            else {
+                                percentageDisplay.style.color = 'red';
+                            }
+                            // Display result
+                            results.textContent = `You scored ${score} out of 5!. Click on Reset Quiz to try again.`;
+                            percentageDisplay.textContent = percentage.toFixed(2) + '%';
+                        }
+                        function resetQuiz() {
+                            //reset answers
+                            document.getElementById('quiz-form').reset();
+                            // reset results
+                            document.getElementById('result').textContent = '';
+                            // reset percentage score
+                            document.getElementById('percentageScore').textContent = '';
+                            // reset feedback
+                            document.querySelectorAll('.feedback').forEach(feedback => {
+                                feedback.textContent = '';
+                            });
+                        }
+                    </script>
+                </div>
+            </div>
+        </main>
+        <Footer>
+            <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">KSU IT 3203</p>
+        </footer>
+    </body>
+</html>

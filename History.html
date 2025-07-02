@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Evolution of HTTP - History</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    <!-- Nav Bar -->
+        <nav id="navigationbar" aria-label="NavigationBar">
+            <!-- Hidden menu toggle for Mobile -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+            <!-- Hamburger icon label -->
+            <label for="menu-toggle" class="menu-toggle-label">
+                &#9776; Menu
+            </label>
+            <!-- Main navigation links -->
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="History.html" class="nav-link">History</a>
+                <a href="Future Development.html" class="nav-link">Future Development</a>
+                <a href="Quiz.html" class="nav-link">Quiz</a>
+                <a href="References.html" class="nav-link">References</a>
+            </div>
+        </nav>
+        <main>
+            <h1>Evolution of HTTP</h1>
+            <div class="cards">
+                <div class="history-card">
+                    <h2>Early Development and Introduction of HTTP/0.9</h2>
+                    <div class="history-cards">
+                    <img src="images/tim berners-lee.jpg" alt="HTTP/0.9 Image" class="http-image">
+                        <div class="history-card-text">
+                            <p>
+                                The history of HTTP dates back all the way to 1991, where Tim Berners-Lee, alongside his colleagues, developed what was initially 
+                                meant to be a simple protocol for sharing files, but later evolved into what we use for everyday queries.
+                            </p>
+                            <p>
+                                Starting in 1989, English computer scientist Tim Berners-Lee, whilst under the employment of European Organization 
+                                for Nuclear Research (CERN), wrote a proposal to build a hypertext system over the World Wide Web, implemented in 1990. 
+                                The initial development was supposed to be a simple protocol to exchange documents. 
+                            </p>
+                            <p>
+                                The one-line protocol, known as HTTP/0.9, consisted of a one-line request starting using the GET method. 
+                                The response was also just as simple, displaying just the file requested. It was extremely basic, with no 
+                                status or error codes, only HTML files were allowed, and errors would generate an HTML file describing the problem.
+                            </p>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Evolution_of_HTTP" target="_blank">Source: MozDevNet</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="history-card">
+                    <h3>HTTP/1.0 and the Birth of Web Browsers</h3>
+                    <div class="history-cards">
+                        <div class="history-card-text">
+                            <p>
+                                In 1996, HTTP/1.0 was introduced, which added more features to the protocol, such as status codes, headers, and the ability to handle 
+                                different types of content. This version also allowed for persistent connections, meaning that multiple requests could be sent over a single 
+                                connection.
+                            </p>
+                            <p>
+                               To add onto the complexity of the newer HTTP/1.0, the concept of HTTP headers in requests and responses would introduce 
+                               the transmission of metadata. This would include User-Agent, Host, Content-Type, Content-Length, and Cache-Control.
+                            </p>
+                            <p>
+                                <a href="https://www.rfc-editor.org/rfc/rfc1935.html " target="_blank">Source: Quarterman & Carl-Mitchell - RFC 1935</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="history-card">
+                    <h3>HTTP/1.1 and the Rise of Dynamic Content</h3>
+                    <div class="history-cards">
+                        <div class="history-card-text">
+                            <p>
+                                In 1999, HTTP/1.1 was introduced, which added support for persistent connections, chunked transfer encoding, and additional caching 
+                                mechanisms. This version also introduced the concept of virtual hosting, allowing multiple websites to be hosted on a single server.
+                            </p>
+                            <p>
+                                The rise of dynamic content, such as web applications and interactive websites, led to the need for more efficient communication 
+                                between clients and servers. HTTP/1.1 addressed these needs by introducing features like pipelining and improved caching mechanisms.
+                            </p>
+                            <p>
+                                <a href="https://www.rfc-editor.org/rfc/rfc2616.html" target="_blank">Source: Fielding & Gettys - RFC 2616</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="history-card">
+                    <h3>HTTP/2 and the Push for Performance</h3>
+                    <div class="history-cards">
+                        <div class="history-card-text">
+                            <p>
+                                In 2015, HTTP/2 was introduced, which focused on improving performance and reducing latency. It introduced features like 
+                                multiplexing, header compression, and server push, allowing multiple requests to be sent over a single connection.
+                            </p>
+                            <p>
+                                The introduction of HTTP/2 marked a significant shift in how web content is delivered, 
+                                with a focus on optimizing performance and reducing the overhead of HTTP communication.
+                            </p>
+                            <p>
+                                <a href="https://www.rfc-editor.org/rfc/rfc7540.html" target="_blank">Source: Belshe et al. - RFC 7540</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </main>
+        <Footer>
+            <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">KSU IT 3203</p>
+        </footer>
+    </body>
+</html>
+                        
+        
