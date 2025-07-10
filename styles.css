@@ -1,7 +1,7 @@
-/* import font */
+/* ---------------- Font Import ------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 
-/* Global styles */
+/* ---------------- Global Styles ------------------- */
 body {
   font-family: 'Sora', sans-serif;
   margin: 0;
@@ -26,7 +26,7 @@ body {
   background-attachment: fixed;
   background-position: center;
 }
-/* Navigation Bar */
+/* ---------------- Navigation Bar Styles ------------------- */
 nav#navigationbar {
   display: flex;
   height: 55px;
@@ -62,14 +62,12 @@ nav#navigationbar {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Header Styles */
+/* ---------------- Header Styles ------------------- */
 h1 {
   text-align: center;
   margin-top: 20px;
   color: black;
 }
-
-
 h2 {
   text-align: center;
   margin-top: 0;
@@ -81,14 +79,7 @@ h3 {
   color: black;
 }
 
-/* Card Style for Multiple Cards */
-.cards {
-  display:flex;
-  justify-content:center;
-  flex-direction: column;
-}
-
-/* Home Page Card Styles */
+/* ---------------- Home Page Styles ------------------- */
 .home-subheader {
   text-align: center;
   margin-top: 20px;
@@ -123,8 +114,13 @@ h3 {
   font-size: 14px;
   color: black;
 }
+.cards {
+  display:flex;
+  justify-content:center;
+  flex-direction: column;
+}
 
-/* History Page Card Styles */
+/* ---------------- History Page Styles ------------------- */
 .history-card{
   background-color:white;
   border-radius: 10px;
@@ -157,7 +153,7 @@ h3 {
   color: black;
 }
 
-/* Future Development */
+/* ---------------- Future Development ------------------- */
 .future-cards{
   display:flex;
   justify-content:center;
@@ -184,8 +180,7 @@ h3 {
   align-self: flex-start;
 }
 
-/* Quiz Page Styles */
-
+/* ---------------- Quiz Page Styles ------------------- */
 .quiz-container{
   display: flex;
   flex-direction: column;
@@ -204,7 +199,7 @@ h3 {
   color: black;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-/* Buttons */
+/* ---------------- Menu Buttons ------------------- */
 .buttons {
   border: none;
   display: flex;
@@ -255,9 +250,10 @@ h3 {
   vertical-align: middle;
 }
 
-/* ---------------- RESPONSIVE STUFF ------------------- */
+/* ---------------- References ------------------- */
 
 
+/* ---------------- Responsive/Mobile Styles ------------------- */
 /* Hide checkbox */
 .menu-toggle {
   display: none;
