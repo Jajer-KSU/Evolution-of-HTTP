@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 
 /* ---------------- Global Styles ------------------- */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Sora', sans-serif;
   margin: 0;
@@ -25,6 +30,14 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+}
+.card-text,
+.history-card-text,
+.quiz-card,
+.referencesText {
+  word-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
 }
 /* ---------------- Navigation Bar Styles ------------------- */
 nav#navigationbar {
@@ -252,6 +265,27 @@ h3 {
 
 /* ---------------- References ------------------- */
 
+.referencesText {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.referencesText li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.referencesText a {
+  color: #007acc;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.referencesText a:hover {
+  text-decoration: underline;
+}
 
 /* ---------------- Responsive/Mobile Styles ------------------- */
 /* Hide checkbox */
@@ -266,40 +300,152 @@ h3 {
   display: none;
 }
 
-/* Menu Style for Mobile */
-@media (max-width: 768px) {
-  .menu-container {
-    display: flex;
-    justify-content: space-between;
+/* Responsive Layout for different screen sizes */
+@media (max-width: 1024px) {
+  .card-content,
+  .future-card-content,
+  .history-cards {
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
-    width: 100%;
-    margin-left: 0px;
   }
-  
-  /* show menu toggle */
+  .card-content img,
+  .future-card-content img,
+  .history-cards img {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+  .card,
+  .future-card,
+  .history-card {
+    max-width: 95vw;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav#navigationbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 16px;
+    position: relative;
+    margin-bottom: 0px;
+  }
+
   .menu-toggle-label {
     display: inline-block;
-  }
+    font-size: 18px;
+    padding: 8px 10px;
+    background: none;
+    border: none;
+    }
 
   .nav-links {
     display: none;
     flex-direction: column;
+    width: 100%;
     margin-top: 10px;
-    justify-content: space-between;
   }
-  .menu-toggle:hover + .menu-toggle-label {
-    color: #000000;
-    background-color: #a2ffc4;
-    border-radius: 10px;
-    padding: 5px;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  /* Show menu when checkbox is checked */
+
   .menu-toggle:checked + .menu-toggle-label + .nav-links {
     display: flex;
+    position: relative; /* makes content push down */
+  }
+
+  .nav-link {
+    display: block;
+    padding: 10px;
+    font-size: 15px;
+    text-align: left;
+    background-color: #a5e0fe;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .nav-link:hover {
+    background-color: #a2ffc4;
+    color: #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .menu-toggle-label:hover {
+    background-color: #a2ffc4;
+    color: #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.3em;
+    margin-top: 10px;
+  }
+  .card,
+  .future-card,
+  .history-card,
+  .quiz-card {
+    padding: 15px;
+    max-width: 98vw;
+  }
+  .card-content img,
+  .future-card-content img,
+  .history-cards img {
+    width: 100%;
+    max-width: 350px;
+  }
+  .buttons button {
+    min-width: 180px;
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+  .percentageScore {
+    font-size: 32px;
+  }
+  .result {
+    font-size: 16px;
   }
 }
+
+@media (max-width: 480px) {
+  nav#navigationbar {
+    padding: 5px 8px;
+    height: auto;
+  }
+  .menu-toggle-label {
+    font-size: 18px;
+    padding: 8px 10px;
+  }
+  .card,
+  .future-card,
+  .history-card,
+  .quiz-card {
+    padding: 8px;
+    font-size: 13px;
+  }
+  .card-content img,
+  .future-card-content img,
+  .history-cards img {
+    width: 100%;
+    max-width: 220px;
+  }
+  .buttons button {
+    min-width: 120px;
+    font-size: 13px;
+    padding: 8px 8px;
+  }
+  .percentageScore {
+    font-size: 22px;
+  }
+  .result {
+    font-size: 13px;
+  }
+  .referencesText {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+  }
+  footer p {
+    font-size: 12px;
+  }
+}
+
 /*footer */
 footer {
     text-align: center;
